@@ -1,0 +1,28 @@
+{
+  "name": "ws_task",
+  "version": "1.0.0",
+  "description": "Template for the WebSocket remote control task",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": " ts-node ./src/app.ts",
+    "start:front": " ts-node ./src/app.ts",
+    "start:dev": "nodemon -e ts -w ./src -x ts-node ./src/app.ts",
+    "start:all": "concurrently \"(npm start --prefix ./front/remote-control)\" \"(npm run start)\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrei Auchynnikau",
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.2.2",
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "@nut-tree/nut-js": "^3.0.0",
+    "jimp": "^0.16.1",
+    "prettier": "^2.7.1",
+    "ws": "^8.8.0",
+    "dotenv": "^16.0.1"
+  }
+}
