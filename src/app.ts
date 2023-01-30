@@ -11,7 +11,7 @@ import rectangle from './tools/rectungle.js'
 import screenMain from './tools/screen.js'
 
 const wss = new WebSocketServer({ port: Number(process.env.PORT) })
-console.log(process.env.PORT)
+
 const mouseClass = new MouseClass(providerRegistry)
 wss.on('connection', onConnection)
 function onConnection(ws) {
@@ -63,3 +63,5 @@ function onConnection(ws) {
         console.log('Пользователь отключился')
     })
 }
+
+console.log(`app start!, localhost:${process.env.PORT}`)
